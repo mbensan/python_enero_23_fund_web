@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos de Display</title>
+  <style>
+    h2 {
+      text-align: center;
+    }
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+      background-color: aquamarine;
+      padding: 50px;
+      
+      /* Propiedades de Flex */
+      display: flex;
+      /* Cajas hacia al lado */
+      justify-content: space-between;
+      /* Cajas en vertical */
+      align-items: start;
+      flex-wrap: wrap;
+      /* Alinear las líneas de cajas */
+      align-content: space-between;
+    }
+    .noticia {
+      /* interior de las caja */
+      background-color: burlywood;
+      border: 2px solid black;
+      border-radius: 5px;
+      
+      /* posicionamiento de las caja */
+      width: 250px;
+      padding: 20px;
+    }
+    .col-1 {
+      flex: 1;
+    }
+    .col-2 {
+      flex: 2;
+    }
+    .col-3 {
+      flex: 3;
+    }
+    .col-1, .col-2, .col-3 {
+      border: 2px solid black;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplos de la propiedad display</h2>
+  <section class="container">
+    <article class="noticia"><b>1</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro perferendis temporibus modi odio, quisquam dignissimos praesentium eius facere fugit quis nulla dolore itaque facilis culpa asperiores! Quo, consequatur laudantium! Quo, consequatur laudantium! Quo, consequatur laudantium!</article>
+    <article class="noticia"><b>2</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit fuga quos quasi similique, quidem ea expedita praesentium impedit tempora.</article>
+    <article class="noticia"><b>3</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dolor saepe amet obcaecati officia voluptatem culpa ex iste adipisci eos voluptate iure quidem, unde illum dignissimos, quo magni ab minus.</article>
+    <article class="noticia"><b>3</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dolor saepe amet obcaecati officia voluptatem culpa ex iste adipisci eos voluptate iure quidem, unde illum dignissimos, quo magni ab minus.</article>
+    <article class="noticia"><b>3</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dolor saepe amet obcaecati officia voluptatem culpa ex iste adipisci eos voluptate iure quidem, unde illum dignissimos, quo magni ab minus.</article>
+    <article class="noticia"><b>3</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic dolor saepe amet obcaecati officia voluptatem culpa ex iste adipisci eos voluptate iure quidem, unde illum dignissimos, quo magni ab minus.</article>
+  </section>
+
+  <section class="container">
+    <article>
+      <a href="#">Cerrar</a>
+    </article>
+    <article class="col-2">
+      <b>1</b>
+      Genaro García Luna, secretario de Seguridad Pública de México entre 2006 y 2012, fue declarado culpable de los cinco cargos que enfrentaba en un juicio en Nueva York, incluidos varios de participación en una empresa criminal.
+    </article>
+    <article class="col-1">
+      <b>2</b>
+      Tras las críticas en los Grammy, Madonna ahora bromea sobre su aspecto
+    </article>
+    <article class="col-3">
+      <b>3</b>
+      Emma Thompson tiene dos premios de la Academia a su nombre, pero reveló que los Oscar la dejaron sintiéndose "gravemente enferma".
+      La actriz británica, que interpreta a Miss Trunchbull en "Matilda the Musical" en Netflix, respondió a una pregunta sobre si le ha resultado "difícil lidiar con la fama" en una entrevista con Radio Times.
+    </article>
+    <div class="col-2">
+      <b>4</b>
+      Un último párrafo para entretenerse
+    </div>
+  </section>
+</body>
+</html>

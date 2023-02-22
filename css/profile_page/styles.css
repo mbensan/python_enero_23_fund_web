@@ -1,0 +1,26 @@
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.user {
+  width: 500px;
+}
+
+.celeste {
+  background-color: #17A2B8;
+  height: 3rem;
+  position: relative;
+}
+
+#profile {
+  font-size: 3rem;
+  position: relative;
+  top: 1.5rem;
+  left: 1.2rem;
+}
+
+.blanca {
+  height: 6rem;
+  border: 2px solid #666;
+}

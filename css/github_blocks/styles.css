@@ -1,0 +1,30 @@
+* {
+  /* Borrar una vez terminado el ejercicio */
+  outline: 1px solid red;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+}
+.azul {
+  background-color: #4CC7DC;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.rosa {
+  background-color: #D7A1D4;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+.blanco {
+  background-color: aliceblue;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+}
+img.octocat {
+  height: 200px;
+}

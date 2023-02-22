@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Formulario</title>
+  <style>
+    /* Truco para que los DIV se separen */
+    div {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ingrese los datos de su mascota</h2>
+  <p><a href="mi_primera_pagina.html">Ir a la primera página</a></p>
+  <form>
+    <div>
+      <label>Nombre de la mascota:</label> 
+      <input type="text">
+    </div>
+    <div>
+      <label>Fecha de Nacimiento:</label> 
+      <input type="date">
+    </div>
+    <div>
+      <label>Contraseña:</label> 
+      <input type="password">
+    </div>
+    <div>
+      <p>Especie:</p>
+      <label>Perro:</label> 
+      <input type="radio" name="especie">
+      <label>Gato:</label> 
+      <input type="radio" name="especie">
+      <label>Otro:</label> 
+      <input type="radio" name="especie">
+    </div>
+    <div>
+      <p>Vacunas:</p>
+      <label>Antirrábica:</label> 
+      <input type="checkbox" name="vacunas">
+      <label>Octuple:</label> 
+      <input type="checkbox" name="vacunas">
+      <label>Antiparasitária:</label> 
+      <input type="checkbox" name="vacunas">
+    </div>
+    <div>
+      <label>Gravedad</label>
+      <select>
+        <option>Leve</option>
+        <option>Media</option>
+        <option>Grave</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Detalles:</label>
+      <textarea cols="20" rows="3"></textarea>
+    </div>
+
+    <input type="submit">
+  </form>
+</body>
+</html>

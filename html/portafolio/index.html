@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <style>
+    /* px, cm, in, %, rem */
+    /* estilos para una etiqueta */
+    img {
+      width: 300px;
+    }
+    /* estilos para una clase */
+    .icono {
+      width: 2rem;
+    }
+    /* estilos para un ID (no se puede repetir) */
+    #tech {
+      color: blue;
+      text-align: center;
+    }
+    #social {
+      color: crimson;
+      background-color: cadetblue;
+    }
+    table {
+      border: 2px solid greenyellow;
+    }
+    #titulo {
+      color: purple;
+    }
+    .header {
+      color: blue;
+    }
+    h1 {
+      color: orangered;
+      text-decoration: underline;
+      letter-spacing: 0.5rem;
+      font-weight: bold;
+    }
+    #mi-tabla td {
+      border: 2px solid black;
+    }
+
+    input[type="email"] {
+      background-color: rgba(1, 137, 182, 0.5);
+    }
+    textarea, input[type="text"] {
+      background-color: darkkhaki;
+    } 
+
+  </style>
+</head>
+<body>
+  <h1 id="titulo" class="header">Eduardo Delgado</h1>
+  <img src="img/perfil.jpg" alt="Foto">
+  <p>
+    <img class="icono" src="img/github.jpg" alt="">
+    <a href="#">Mi Github</a>
+    <img class="icono" src="img/linkedin.webp" alt="">
+    <a href="#">Mi LinkedIn</a>
+    <img class="icono" src="img/icono.png" alt="">
+    <a href="#">Enviame un correo</a>
+  </p>
+  <h2 id="tech">Tecnologías</h2>
+  <table id="mi-tabla">
+    <thead>
+      <tr>
+        <th>Frontend</th>
+        <th>Python</th>
+        <th>Javascript</th>
+        <th>Database</th>
+        <th>Concept</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HTML5</td>
+        <td>Django</td>
+        <td>Express</td>
+        <td>MySQL</td>
+        <td>AJAX</td>
+      </tr>
+      <tr>
+        <td>CSS3</td>
+        <td>Flask</td>
+        <td>Mongoose</td>
+        <td>MongoDB</td>
+        <td>OOP</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+        <td>Unittest</td>
+        <td>React JS</td>
+        <td>PostgreSQL</td>
+        <td>REST</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="social">Social Snakes</h2>
+  <p>Social Media App <strong>Made with Python</strong> <a href="#">Code</a> | <a href="#">Deployed</a></p>
+  <h3>Contact Me:</h3>
+  <form>
+    <p>
+      <label for="nombre">Nombre:</label> <input type="text" id="nombre">
+      <label for="correo">Correo:</label> <input type="email" id="correo">
+    </p>
+    <div>
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" id="mensaje" cols="30" rows="3"></textarea>
+    </div>
+    <input type="submit" value="Enviar mensaje">
+  </form>
+</body>
+</html>
