@@ -1,0 +1,8 @@
+.container {
+  width: 1080px;
+}
+
+#boton-sign-out {
+  color: antiquewhite;
+  font-weight: bold;
+}
