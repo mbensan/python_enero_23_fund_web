@@ -40,5 +40,7 @@ else {
 }
 
 // Ciclos
-
+function validate () {
+  // 1. Captures los datos de los campos del formulario
+}
 
