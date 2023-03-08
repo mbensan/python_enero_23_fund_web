@@ -1,3 +1,26 @@
+function despedir () {
+  console.log("hgfds")
+  const input_name = document.querySelector('#name')
+  // para obtener el valor de un campo de formulario, debemos usar la propiedad "value"
+  const name = input_name.value
+  if (!name.match(/^([^0-9]*)$/)) {
+    alert('No se permiten números en el nombre')
+    return
+  }
+
+  if (name != ""){
+    alert('Adiós ' + name + ', que te vaya bien!')
+  }
+}
+
+function add_like () {
+  const span_likes = document.querySelector('#likes span')
+  
+  const num_likes = parseInt(span_likes.innerHTML)
+
+  span_likes.innerHTML = num_likes + 1
+}
+
 function mult3 (x) {
   const resultado = x * 3
   return resultado
