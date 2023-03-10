@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arreglos y Objetos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <div class="container">
+    <h1 class="text-center mt-3">Pregunta por tu pokemon</h1>
+    <div class="row mt-3">
+      <div class="col-4 offset-2">
+        <form id="poke_form" onsubmit="cargar_pokemon(event)">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="number" required min="1" max="500" class="form-control" id="poke_id" aria-describedby="emailHelp">
+          </div>
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+      </div>
+      <div class="col-4">
+        <section id="pokemon" class="bg-secondary p-4">
+          <img class="w-100 d-block" src="https://pokemonworldwidefans.files.wordpress.com/2015/03/pokemon1.gif" alt="pokemon genérico">
+          <h2>Nombre Pokemon</h2>
+          <ul>
+            <li>
+              <b>Experiencia:</b>
+              <span>asdf</span>
+            </li>
+            <li>
+              <b>Peso:</b>
+              <span>asdf</span>
+            </li>
+            <li>
+              <b>Altura:</b>
+              <span>asdf</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script> // 10
+    // acá vamos a escribir nuestro código
+    async function cargar_pokemon (event) {
+      // 1. Evitamos que se recargue la página
+      event.preventDefault()
+
+      // 2. Obtenemos el ID del pokemon, que ingresó el usuario
+      const id_input = document.querySelector('#poke_id')
+      const id = id_input.value
+
+      // 3. Obtengo los datos del pokemon, desde la API
+      const respuesta = await fetch('https://pokeapi.co/api/v2/pokemon/' + id)
+
+      // 4. Desempaqueto los datos
+      const datos = await respuesta.json()
+
+      console.log(datos)
+      dibujar_pokemon(datos)
+    }
+
+    function dibujar_pokemon (datos) {
+      console.log(datos)
+      // 1. Colocamos el nombre en el H2
+      const h2_nombre = document.querySelector('#pokemon h2')
+      h2_nombre.innerHTML = datos.name
+
+      // 2. Colocamos la información de los SPAN
+      const spans = document.querySelectorAll('#pokemon span')
+
+      spans[0].innerHTML = datos.base_experience
+      spans[1].innerHTML = datos.weight
+      spans[2].innerHTML = datos.height
+
+      // 3. Modificamos la imagen
+      const img = document.querySelector('#pokemon img')
+      img.src = datos.sprites.front_default
+    }
+  </script>
+</body>
+</html>
